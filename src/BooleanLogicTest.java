@@ -1,4 +1,4 @@
-public class Main {
+public class BooleanLogicTest {
 
     public static class Channel {
         public Boolean isEntitled;
