@@ -8,8 +8,34 @@ import java.util.Optional;
 public class OptionalTest {
 
     public static void main(String[] args) {
-        Optional<String> optional = Optional.empty();
+        /*Optional<String> optional = Optional.empty();
 
-        optional = Optional.of(new String("a"));
+        optional = Optional.of(new String("a"));*/
+
+        new OptionalTest().test();
+
+        TestObj testObj1 = null;
+        TestObj testObj2 = new TestObj(10);
+        Integer optn = Optional.ofNullable(testObj1).map(t -> t.n * 2).orElse(0);
+        System.out.println(optn);
+    }
+
+    private int test() {
+        for(;;) {
+            try {
+                return 1;
+            } finally {
+                break;
+            }
+        }
+        return -1;
+    }
+}
+
+class TestObj {
+    public Integer n = 10;
+
+    public TestObj(Integer n) {
+        this.n = n;
     }
 }
