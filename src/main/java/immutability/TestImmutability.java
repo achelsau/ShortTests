@@ -18,5 +18,9 @@ public class TestImmutability {
     mutableVO.setBoolean1(false);
     System.out.println("Immutability test: " + immutableVO.getTestMap());
     System.out.println("Immutability test: " + immutableVO.isBoolean1());
+
+    ImmutableVO immutableVO1 = ImmutableVO.builder().test1(mutableVO.getTest1())
+        .boolean1(mutableVO.isBoolean1()).testMap(mutableVO.getTestMap()).build();
+    immutableVO1.setTest1("Bla");
   }
 }
