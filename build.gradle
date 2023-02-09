@@ -24,8 +24,8 @@ repositories {
    }
 }
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+sourceCompatibility = 11
+targetCompatibility = 11
 
 dependencies {
     compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.5'

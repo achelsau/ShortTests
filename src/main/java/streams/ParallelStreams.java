@@ -1,10 +1,8 @@
 package streams;
 
-import com.sun.tools.javac.util.List;
-
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Map;
-import java.util.function.Function;
+import java.util.List;
 import java.util.stream.Collectors;
 
 public class ParallelStreams {
@@ -29,8 +27,34 @@ public class ParallelStreams {
     }
 
     public static void main(String[] args) {
-        List<Integer> integers = List.of(2, 5, 6, 9, 10, 2, 4);
-        integers.parallelStream().forEach(System.out::println);
+        List<Integer> integers = new ArrayList<>();
+        for (int i = 0; i < 1000; i++) {
+            integers.add(i);
+        }
+        System.out.println("Parallel Stream:");
+        long start = System.currentTimeMillis();
+        integers.parallelStream().forEach(i -> {
+            try {
+                System.out.print(i + " ");
+                Thread.currentThread().sleep(50);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        });
+        System.out.println("");
+        System.out.println("Parallel took: " + (System.currentTimeMillis() - start));
+        System.out.println("Sequential Stream:");
+        start = System.currentTimeMillis();
+        integers.stream().forEach(i -> {
+            try {
+                System.out.print(i + " ");
+                Thread.currentThread().sleep(50);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        });
+        System.out.println("");
+        System.out.println("Sequential took: " + (System.currentTimeMillis() - start));
 
         java.util.List<Integer> result = Arrays.stream(Setting.values())
                 .map(Setting::getValue)

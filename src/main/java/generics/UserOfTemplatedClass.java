@@ -1,6 +1,7 @@
 package generics;
 
-import com.sun.tools.javac.util.List;
+
+import java.util.List;
 
 public class UserOfTemplatedClass {
   static TemplatedClass<Integer> templatedClass = new TemplatedClass<>();
