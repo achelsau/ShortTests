@@ -23,6 +23,10 @@ public class OptionalTest {
         String result = Optional.ofNullable(namespace).orElseThrow();
 
         System.out.println(result);
+
+        Object o = Optional.ofNullable(null).orElse(null);
+        o.hashCode();
+        System.out.println("Opt: " + o);
     }
 
     private int test() {
