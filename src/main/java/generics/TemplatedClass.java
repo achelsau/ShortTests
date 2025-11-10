@@ -1,12 +1,12 @@
-package generics;
+package main.java.generics;
 
 
 import java.util.List;
 
 public class TemplatedClass<T> {
-  List<T> bla;
+  public List<T> bla;
 
-  List<T> getT() {
+  public List<T> getT() {
     return bla;
   }
 }

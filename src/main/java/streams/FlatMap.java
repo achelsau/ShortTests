@@ -1,4 +1,4 @@
-package streams;
+package main.java.streams;
 
 import com.sun.source.doctree.EndElementTree;
 
@@ -46,6 +46,16 @@ public class FlatMap {
         .distinct()
         .collect(Collectors.toList());
     System.out.println(collect);
+
+    List<Object> jobs = List.of(1, 2, 3, 4, 5);
+    Map<Object, Object> result = jobs.stream()
+        .flatMap(job ->
+                     Optional.ofNullable(null)
+                         .stream() // <-- Optional::stream() is used right here
+                         .map(vote -> Map.entry(job, vote))
+        )
+        .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+    System.out.printf("Result: %s\n", result);
   }
 
   @Data
