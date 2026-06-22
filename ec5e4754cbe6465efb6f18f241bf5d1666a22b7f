@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "mode": "full",
+  "commit_sha": "ec5e4754cbe6465efb6f18f241bf5d1666a22b7f",
+  "author": "achelsau@adobe.com",
+  "timestamp": "2026-06-22T19:11:59+03:00",
+  "detection": {
+    "ai_assisted": false,
+    "method": "none",
+    "tool": "unknown",
+    "model": "",
+    "confidence": 0.0
+  },
+  "stats": {
+    "total_additions": 1,
+    "total_deletions": 1,
+    "ai_additions": 0,
+    "ai_deletions": 0,
+    "human_additions": 1,
+    "human_deletions": 1
+  },
+  "files": {
+    "src/main/java/streams/FlatMap.java": {
+      "ai_additions": 0,
+      "human_additions": 1,
+      "ai_deletions": 0,
+      "human_deletions": 1
+    }
+  }
+}
