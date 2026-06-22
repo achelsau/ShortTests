@@ -51,7 +51,7 @@ public class FlatMap {
     Map<Object, Object> result = jobs.stream()
         .flatMap(job ->
                      Optional.ofNullable(null)
-                         .stream() // <-- Optional::stream() is used right here
+                         .stream()
                          .map(vote -> Map.entry(job, vote))
         )
         .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
