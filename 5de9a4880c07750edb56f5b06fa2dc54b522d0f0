@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "mode": "full",
+  "commit_sha": "5de9a4880c07750edb56f5b06fa2dc54b522d0f0",
+  "author": "achelsau@adobe.com",
+  "timestamp": "2026-06-22T19:18:40+03:00",
+  "detection": {
+    "ai_assisted": false,
+    "method": "none",
+    "tool": "unknown",
+    "model": "",
+    "confidence": 0.0
+  },
+  "stats": {
+    "total_additions": 142,
+    "total_deletions": 0,
+    "ai_additions": 0,
+    "ai_deletions": 0,
+    "human_additions": 142,
+    "human_deletions": 0
+  },
+  "files": {
+    "calculate_capacity.py": {
+      "ai_additions": 0,
+      "human_additions": 142,
+      "ai_deletions": 0,
+      "human_deletions": 0
+    }
+  }
+}
